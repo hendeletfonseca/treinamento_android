@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Sports</string>
+    <string name="title_placeholder">Title</string>
+    <string name="news_placeholder">News</string>
+    <string name="sports_info_placeholder">Here is some news</string>
+    <string name="sub_title_detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae elit molestie turpis tristique blandit. Pellentesque lorem ligula, sollicitudin quis odio quis, laoreet feugiat nulla. Nunc dapibus malesuada imperdiet. Proin nec lectus lacus. Sed consectetur placerat metus nec euismod. Quisque consequat dictum dui ut ornare. Vivamus aliquam rutrum purus, id tempor purus luctus a. Nunc imperdiet euismod quam quis porttitor. Vivamus vestibulum scelerisque urna, hendrerit posuere nisl laoreet eu. Nunc luctus, velit sit amet congue pretium, mauris enim finibus justo, quis condimentum sapien dui ut odio. Nulla tincidunt mi augue, a auctor dui faucibus et. Nunc eu vehicula ligula. Proin sit amet urna vel dui ultricies interdum et ut tortor. Pellentesque in semper metus, nec convallis nunc. Cras faucibus imperdiet urna, sagittis elementum nisl hendrerit rhoncus. Sed dignissim congue tempor. Vestibulum iaculis aliquam massa ut vestibulum. Vestibulum efficitur non dolor nec eleifend. Nullam porttitor libero eget pulvinar feugiat. Nunc sed mi vitae mauris porttitor dapibus. Cras non nisl tempor, gravida justo sed, consectetur nulla. Quisque eu efficitur sem. Curabitur tortor enim, malesuada ut elementum ac, iaculis ac erat. Quisque fermentum aliquam nibh non tincidunt. Sed imperdiet at eros eget feugiat. Suspendisse eu nibh enim. Pellentesque condimentum enim eget augue commodo, at sodales nisi fringilla. Proin tempor ex lorem, et tincidunt nisi porttitor sit amet. Vivamus euismod elit at nisl semper, sed viverra magna imperdiet. Vestibulum eu tristique justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer fringilla faucibus leo, id semper felis. Aenean ac porttitor orci. Vivamus sit amet ex efficitur, laoreet enim sit amet, suscipit nisi. Praesent fringilla vestibulum nulla, eget posuere massa volutpat eu. Fusce viverra, elit sit amet tempus rhoncus, dolor augue interdum metus, at porttitor nunc metus eu ligula. Morbi facilisis ligula nibh, at sollicitudin tortor porta at. Donec in consequat turpis. Proin tincidunt a ante nec rhoncus. Maecenas vulputate mauris tellus, eget ultricies velit convallis in. Etiam quis ligula vel elit viverra vulputate et ac dolor. Integer condimentum, velit sit amet laoreet laoreet, quam nulla viverra arcu, vitae dapibus augue augue non ipsum. Nulla ut malesuada metus. Aliquam scelerisque blandit ex, vitae ultricies nulla pharetra vulputate. Morbi tincidunt maximus viverra. Nullam cursus nunc ac sem sollicitudin, sed interdum mi fermentum. Aliquam dignissim accumsan ante eu condimentum. Curabitur erat felis, feugiat ac orci eget, posuere suscipit ex. Integer sagittis nibh in massa elementum imperdiet. Aliquam erat volutpat. Vivamus vel sagittis sapien. Donec vitae accumsan elit, sit amet molestie tortor. Aenean ac ornare metus, eget pretium urna. Fusce ac hendrerit neque. Vivamus a mi pulvinar, bibendum elit bibendum, blandit sapien. Duis semper ex a libero pretium ultrices. Maecenas condimentum pharetra velit varius faucibus. Praesent tempor ullamcorper justo, pharetra pulvinar neque placerat quis. Integer tristique, metus ut vehicula tempus, tortor arcu pulvinar nulla, ut viverra lacus erat vitae sem. Fusce consequat tristique fringilla. Aliquam blandit facilisis dui, ut varius risus euismod vel.</string>
+
+    <string-array name="sports_titles">
+        <item>Baseball</item>
+        <item>Badminton</item>
+        <item>Basketball</item>
+        <item>Bowling</item>
+        <item>Cycling</item>
+        <item>Golf</item>
+        <item>Running</item>
+        <item>Soccer</item>
+        <item>Swimming</item>
+        <item>Table Tennis</item>
+        <item>Tennis</item>
+    </string-array>
+
+    <string-array name="sports_info">
+        <item>Here is some Baseball news!</item>
+        <item>Here is some Badminton news!</item>
+        <item>Here is some Basketball news!</item>
+        <item>Here is some Bowling news!</item>
+        <item>Here is some Cycling news!</item>
+        <item>Here is some Golf news!</item>
+        <item>Here is some Running news!</item>
+        <item>Here is some Soccer news!</item>
+        <item>Here is some Swimming news!</item>
+        <item>Here is some Table Tennis news!</item>
+        <item>Here is some Tennis news!</item>
+    </string-array>
+
+    <array name="sports_images">
+        <item>@drawable/img_baseball</item>
+        <item>@drawable/img_badminton</item>
+        <item>@drawable/img_basketball</item>
+        <item>@drawable/img_bowling</item>
+        <item>@drawable/img_cycling</item>
+        <item>@drawable/img_golf</item>
+        <item>@drawable/img_running</item>
+        <item>@drawable/img_soccer</item>
+        <item>@drawable/img_swimming</item>
+        <item>@drawable/img_tabletennis</item>
+        <item>@drawable/img_tennis</item>
+    </array>
+</resources>
