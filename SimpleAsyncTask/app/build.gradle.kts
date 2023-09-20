@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.twoactivities"
+    namespace = "com.example.simpleasynctask"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.twoactivities"
+        applicationId = "com.example.simpleasynctask"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
@@ -19,7 +19,10 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -36,6 +39,4 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-    androidTestImplementation ("com.android.support.test:rules:1.0.2")
-    androidTestImplementation ("com.android.support.test:runner:1.0.2")
 }

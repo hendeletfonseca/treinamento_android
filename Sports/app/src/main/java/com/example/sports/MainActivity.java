@@ -2,12 +2,16 @@ package com.example.sports;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.view.View;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,17 +20,26 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private ArrayList<Sport> mSportsData;
     private SportsAdapter mAdapter;
+    static final String STATE_SPORTS_DATA = "sportsData";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        int gridColumnCount =
+                getResources().getInteger(R.integer.grid_column_count);
+        int swipeDirs;
+        if(gridColumnCount > 1){
+            swipeDirs = 0;
+        } else {
+            swipeDirs = ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT;
+        }
         // Initialize the RecyclerView.
         mRecyclerView = findViewById(R.id.recyclerView);
 
         // Set the Layout Manager.
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(this, gridColumnCount));
 
         // Initialize the ArrayList that will contain the data.
         mSportsData = new ArrayList<>();
@@ -36,10 +49,14 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
 
         // Get the data.
-        initializeData();
+        if (savedInstanceState == null) initializeData();
+        else {
+            ArrayList<Sport> savedSports = savedInstanceState.getParcelableArrayList(STATE_SPORTS_DATA);
+            if (savedSports != null) mSportsData.addAll(savedSports);
+        }
 
         ItemTouchHelper helper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT |
-                ItemTouchHelper.DOWN | ItemTouchHelper.UP, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
+                ItemTouchHelper.DOWN | ItemTouchHelper.UP, swipeDirs) {
             @Override
             public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
                 int from = viewHolder.getAdapterPosition();
@@ -57,6 +74,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         helper.attachToRecyclerView(mRecyclerView);
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putParcelableArrayList(STATE_SPORTS_DATA, mSportsData);
+        super.onSaveInstanceState(outState);
     }
 
     private void initializeData() {
@@ -85,4 +108,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void resetSports(View view) {
+        initializeData();
+    }
 }
